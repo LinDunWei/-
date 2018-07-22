@@ -1,0 +1,275 @@
+.Top{
+    min-width: 980px;
+    height: 35px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #dcdcdc;
+}
+.inner{
+    width: 980px;
+    margin: 0 auto;
+}
+.inner-f{ 
+    position: relative;
+    float: left;
+    font-size: 12px;
+    font-family:"微软雅黑";
+ }
+ .inner-f .gzh{
+     display: none;
+     position: absolute;
+     top: 30px;
+     left: 312px;
+     z-index: 100;
+ }
+ .inner-f .gzh img{
+     width: 100px;
+ }
+.inner-f ul li{
+    float: left;
+    line-height: 35px;
+}
+.spe{
+    display: block;
+    width: 28px;
+    height: 14px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+.inner-r{
+    position: relative;
+    float: right;
+    height: 35px;
+    font-size: 12px;
+    font-family:"微软雅黑";
+    width: 140px;
+}
+.inner-r ul li{
+    float: left;
+    line-height: 35px;
+}
+.li-r{
+    width: 28px;
+    height: 14px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+.inner .inner-r .login{
+    padding-right: 12px;
+    background: url("../image/wyyyd.png") no-repeat;
+    background-position: 28px -316px;
+    cursor: pointer;
+}
+.inner .inner-r .loginMeun:hover  .m-loginops{
+    display: block;
+}
+.m-loginops{
+    display: none;
+    position: absolute;
+    top: 42px;
+    left:-59px;
+    width: 137px;
+    height: 199px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    background-color: #fff;
+    z-index: 100;
+    font-size: 12px;
+    color: #888;
+    padding: 0 10px;
+}
+.b{
+    background: url("../image/jingling.png") no-repeat;
+    background-position: -286px -326px;
+    width: 14px;
+    height: 7px;
+    position: absolute;
+    top: -7px;
+    left: 73px;
+}
+
+.m-loginops li{
+    position: relative;
+    width: 137px;
+    height: 39px;
+    line-height: 39px;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+}
+.m-loginops span{
+    width: 20px;
+    height: 20px;
+    line-height: 35px;
+}
+.m-loginops .Spanlogo1{ 
+    background: url("../image/jingling.png") no-repeat 9999px 9999px; 
+    background-position: -192px -304px; 
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+.m-loginops .Spanlogo2{ 
+    background: url("../image/jingling.png") no-repeat 9999px 9999px; 
+    background-position: -192px -324px; 
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+.m-loginops .Spanlogo3{ 
+    background: url("../image/jingling.png") no-repeat 9999px 9999px; 
+    background-position: -192px -344px; 
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+.m-loginops .Spanlogo4{ 
+    background: url("../image/jingling.png") no-repeat 9999px 9999px; 
+    background-position: -192px -364px; 
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+.m-loginops .Spanlogo5{ 
+    background: url("../image/jingling.png") no-repeat 9999px 9999px; 
+    background-position: -192px -424px; 
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+/*导航栏结束*/
+
+/*logo*/
+.heardertop{
+    min-width: 980px;
+    height: 106px;
+    position: relative;
+}
+.heardertop .logo{
+    float: left;
+    width: 194px;
+    height: 36px;
+    overflow: hidden;
+    padding-top: 40px;
+}
+.heardertop .logo a{            /*logo用背景图做，再用text-indent消掉h1标题，好处：搜索引擎优化。*/
+    display: block;
+    height: 36px;
+    background: url("../image/wyyyd.png") no-repeat;
+    background-position: 0 0;
+    text-indent: -9999px;        
+}
+/*搜索框*/
+.search{
+    width: 400px;
+    height: 36px;
+    float: left;
+    margin: 40px 0 0 88px;
+}
+form{ display: block;}
+input{
+    float: left;
+    color: #868686;
+    width: 21pc;
+    line-height: 14px;
+    padding: 10px;
+    border: 1px solid #c9483c;
+    font-size: 13px;
+}
+.search button{
+    display: block;
+    float: left;
+    width: 42px;
+    height: 36px;
+    background: url(../image/wyyyd.png) no-repeat;
+    background-position: -2px -56px;
+    border: none;
+    cursor: pointer;
+}
+
+/*右边两个小盒子*/
+.twobox{
+    margin: 40px 0 0;
+    float:right;
+}
+.twobox a.box1{
+    background: url("../image/wyyyd.png") no-repeat;
+    background-position: 13px -121px;
+}
+.twobox a.box2{
+    background: url("../image/wyyyd.png") no-repeat;
+    background-position: 13px -175px;
+    border-left: none;
+}
+.twobox a{
+    display: block;
+    float: left;
+    width: 66px;
+    height: 34px;
+    padding: 0 0 0 33px;
+    line-height: 34px;
+    border: 1px solid #ebe6e1;
+    color: #655;
+    font-size: 14px;
+}
+.twobox a:hover{
+    background-color: #f7f7f7;
+}
+
+.hearderbottom .inner{
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.hearderbottom .mianLis{
+    float: left;
+    width: 980px;
+    border-bottom: 2px solid #665656;
+}
+.hearderbottom .mianLis li.fl{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+}
+.hearderbottom .mianLis li.fl a.crt{
+    border-bottom: 2px solid #C9483c;
+    color: #C9483c;
+}
+.hearderbottom .mianLis a:hover{
+    border-bottom: 2px solid #C9483c;
+}
+.hearderbottom .mianLis a{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    padding: 0 20px;
+    font-weight: 700;
+    color: #665656;
+}
+
+.mianLis li.fr{
+    float: right;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 28px;
+}
+.mianLis li.fr a{
+    padding: 0 0 0 22px;
+}
+
+.mianLis li.fr b{
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+}
+.mianLis li.fr b.icon-download{
+    background: url("../image/download.png") no-repeat 100% 0;
+}
+.mianLis li.fr b.icon-rechrge{
+    background: url("../image/rechrge.png") no-repeat 100% 0;
+}
+.mianLis li.fr b.icon-open{
+    background: url("../image/open.png") no-repeat 100% 0;
+}

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网易云阅读--海量新闻、精彩资讯、图书、免费小说、漫画，免费畅读</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style01.css">
+    <link rel="stylesheet" type="text/css" href="css/topStyle.css">
+    <link rel="stylesheet" href="../网易云阅读/css/bottomStyle.css">
+</head>
+<body>
+    <!--头部导航开始-->
+    <div class="g-hd">
+        <div class="Top">
+            <div class="inner">
+                <div class="inner-f">
+                    <ul>
+                        <li><a href="#">网易云阅读</a></li>
+                        <li><span class="spe">|</span></li>
+                        <li><a href="#">国风中文网</a></li>
+                        <li><span class="spe">|</span></li>
+                        <li><a href="#">采薇书院</a></li>
+                        <li><span class="spe">|</span></li>
+                        <li><a href="#">从电脑上导入书籍</a></li>
+                        <li><span class="spe">|</span></li>
+                        <li id="ligzh"><a href="#">公众号</a></li>
+                        <li><span class="spe">|</span></li>
+                        <li><a href="#">渠道推广平台</a></li>
+                    </ul>
+                    <div class="gzh" id="gzh">
+                        <img src="image/gzh.png" alt="">
+                    </div>
+                </div>
+                <div class="inner-r">
+                    <ul>
+                        <div class="loginMeun">
+                        <li>
+                            <a class="login">登录</a>
+                            <div class="m-loginops" id="m-loginops">  <!--备忘：此处有js事件-->
+                                <div class="b"></div>
+                                <ul>
+                                    <li><a href="#" title="网易邮箱登录"><span class="Spanlogo1"></span><span>网易邮箱登录</span></a></li>
+                                    <li><a href="#" title="新浪微博登录"><span class="Spanlogo2"></span><span>新浪微博登录</span></a> </li>
+                                    <li><a href="#" title="腾讯微博登录"><span class="Spanlogo3"></span><span>腾讯微博登录</span></a> </li>
+                                    <li><a href="#" title="手机号登录"><span class="Spanlogo4"></span><span>手机号登录</span></a> </li>
+                                    <li><a href="#" title="微信登录"><span class="Spanlogo5"></span><span>微信登录</span></a> </li>
+                                </ul>
+                            </div>             
+                        </li>
+                        </div>
+                        <li class="li-r">|</li>
+                        <li><a href="#">注册</a></li>
+                        <li class="li-r">|</li>
+                        <li><a href="#">举报</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="heardertop">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="http://yuedu.163.com/">网易云阅读</a>
+                </h1>
+                <div class="search">
+                    <form action="">
+                        <input type="text" id="txt" value="火神">
+                        <button></button>
+                    </form> 
+                </div>
+                <div class="twobox">
+                    <a href="#" class="box1" id="wddy">我的订阅</a>
+                    <a href="#" class="box2" id="wdsj">我的书架</a>
+                </div>
+            </div>
+        </div>
+        <div class="hearderbottom">
+            <div class="inner">
+                <ul class="mianLis">
+                    <li class="fl"><a href="#" class="crt">首页</a></li>   
+                    <li class="fl"><a href="#">出版图书</a></li>
+                    <li class="fl"><a href="#">国风中文网</a></li>
+                    <li class="fl"><a href="#">采薇书院</a></li>
+                    <li class="fl"><a href="#">漫画</a></li>
+                    <li class="fl"><a href="#">订阅</a></li>
+                    <li class="fl"><a href="#">排行榜</a></li>
+                    <li class="fr"><a href="#"><b class="icon-download"></b>客户端</a></li>
+                    <li class="fr"><a href="#"><b class="icon-rechrge"></b>充值</a></li>
+                    <li class="fr"><a href="#"><b class="icon-open"></b>作者中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--头部导航暂时结束，后续添加固定导航栏  2018/6/6 21：47-->
+    <div class="g-hd-fix fix" id="fix">
+        <div class="inner">
+            <h2 class="m-logo"><a href="#">网易云阅读</a></h2>
+        
+            <ul class="m-menu">
+                <li><a href="#" style="color: #c9483c">首页</a></li>
+                <li><a href="#">出版图书</a></li>
+                <li><a href="#">国风中文网</a></li>
+                <li><a href="#">采薇书院</a></li>
+                <li><a href="#">漫画</a></li>
+                <li><a href="#">订阅</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">客户端下载</a></li>
+            </ul>
+
+            <div class="m-sch">
+                <div class="data">
+                    <form action="">
+                        <input type="text" name="" id="" value="失踪的总统" class="s-placeholder">
+                        <input type="hidden" name="">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function scroll(){
+            if(window.pageYOffset != null){
+                return{
+                    left: window.pageXOffset,
+                    top: window.pageYOffset
+                }
+            }
+            else if(document.compatMode == "CSS1Compat"){
+                return{
+                    left:document.documentElement.scrollLeft,
+                    top:document.documentElement.scrollTop
+                }
+            }
+            return{
+                left:  document.body.scrollLeft,
+                top: document.body.scrollTop
+            }
+        }
+        window.onload = function(){
+            function $(id){ return document.getElementById(id);}
+            var fixnav = $("fix");
+            var topfix = fixnav.offsetTop;
+            window.onscroll = function(){
+                if(scroll().top >= topfix){
+                    fixnav.className = "g-hd-fix";
+                }
+                else{
+                    fixnav.className = "g-hd-fix fix"
+                }
+            }
+        }
+    </script>
+    <!--主题内容开始-->
+    <div class="g-centre">
+        <div class="g-bd"> <!--主题-->
+            <div class="main mt17">   
+                <div class="menu" id="Menu">
+                    <div class="category">
+                        <div class="sub">
+                            <h3 style="border: none;">
+                                国风中文网<i></i> 
+                            </h3>
+                            <p><a href="" class="hot">都市生活</a>
+                               <a href="" class="hot">官场职场</a>
+                               <a href="" class="ll">玄幻仙侠</a>
+                            </p>
+                            <p><a href="">悬疑探险</a>
+                               <a href="">灵异恐怖</a>
+                               <a href="" class="ll">短篇小说</a>
+                            </p>
+                        </div>
+                        <div class="more">
+                            <p>
+                                <a href="#">科幻奇幻</a>
+                                <a href="#">军事谍战</a>
+                                <a href="#" class="ll">同人网游</a>
+                                <a href="#" class="ll">历史传奇</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <div class="sub">
+                            <h3>
+                                采薇书院<i></i> 
+                            </h3>
+                            <p><a href="">浪漫青春</a>
+                               <a href="" class="hot">都市言情</a>
+                               <a href="" class="ll">古风古韵</a>
+                            </p>
+                            <p><a href="">穿越架空</a>
+                               <a href="" class="hot">宫斗宅斗</a>
+                               <a href="" class="ll">种田重生</a>
+                            </p>
+                        </div>
+                        <div class="more">
+                                <p>
+                                    <a href="#">短篇美文</a>
+                                    <a href="#">仙侠幻情</a>
+                                    <a href="#" class="ll">灵异推理</a>
+                                    <a href="#" class="ll">同人网游</a>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="category">
+                        <div class="sub">
+                            <h3>
+                                图书<i></i> 
+                            </h3>
+                            <p><a href="" class="hot">小说作品</a>
+                               <a href="" class="hot">人文社会</a>
+                               <a href="" class="ll">成功励志</a>
+                            </p>
+                            <p><a href="">经济管理</a>
+                               <a href="">品质生活</a>
+                               <a href="" class="ll">计算机</a>
+                            </p>
+                        </div>
+                        <div class="more">
+                                <p>
+                                    <a href="#">文学作品</a>
+                                    <a href="#">两性感情</a>
+                                    <a href="#" class="ll">亲子少儿</a>
+                                    <a href="#">培训考试</a>
+                                    <a href="#">杂志期刊</a>
+                                    <a href="#" class="ll">外文外版</a>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="category">
+                        <div class="sub">
+                            <h3>
+                               订阅<i></i> 
+                            </h3>
+                            <p><a href="">创意频道</a>
+                               <a href="">美食频道</a>
+                               <a href="" class="ll">公开课堂</a>
+                            </p>
+                            <p><a href="">视觉频道</a>
+                               <a href="">外文资讯</a>
+                               <a href="" class="ll">自媒体人</a>
+                            </p>
+                        </div>
+                        <div class="moremore">
+                                <p>
+                                    <a href="#">报刊</a>
+                                    <a href="#">娱乐</a>
+                                    <a href="#">新闻</a>
+                                    <a href="#">财经</a>
+                                    <a href="#" class="ll">科技</a>
+                                    <a href="#">生活</a>
+                                    <a href="#">人文</a>
+                                    <a href="#">时尚</a>
+                                    <a href="#">家居</a>
+                                    <a href="#" class="ll">文史</a>
+                                </p>
+                                <p>
+                                    <a href="#">旅游</a>
+                                    <a href="#">游戏</a>
+                                    <a href="#">汽车</a>
+                                    <a href="#">星座</a>
+                                    <a href="#" class="ll">体育</a>
+                                    <a href="#">灵异</a>
+                                    <a href="#">名人博客</a>
+                                    <a href="#">资讯</a>
+                                    <a href="#" class="ll">云课堂</a>
+                                </p>
+                            </div>
+                    </div>
+                </div>                     <!--菜单和轮播图-->
+                <div class="banner" id="banner">
+                    <div class="slider" id="slider">
+                        <ul id="bannerul">
+                            <li class="li-img"><a href="#"><img src="image/banner01.jpeg" alt=""></a></li>
+                            <li class="li-img"><a href="#"><img src="image/banner02.jpeg" alt=""></a></li>
+                            <li class="li-img"><a href="#"><img src="image/banner03.jpeg" alt=""></a></li>
+                            <li class="li-img"><a href="#"><img src="image/banner04.jpeg" alt=""></a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="arr" id="arr">
+                        <span class="l-btn" id="lbtn"></span>
+                        <span class="r-btn" id="rbtn"></span>
+                    </div>
+                    <div class="control" id="control">
+                        <ol class="j-control" id="j-control">
+                            <li class="j-crt">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ol>
+                    </div>
+                    
+                </div>
+                
+                <div class="zbtj mt40">    <!--主编推荐  2018/6/15 0:21-->
+                    <header><h2>主编推荐</h2></header>
+                    <div class="focue" style="position: relative;">
+                        <div class="tabs" id="tab">
+                            <ul style="zoom: 1">
+                                <li id="crt"><span>小说</span></li>
+                                <li><span>图书</span></li>
+                                <li class="ll"><span>订阅</span></li>
+                            </ul>
+                        </div>
+                        <div class="contents" id="contents">
+                            <div class="tab-item" id="show">
+                                    <ul class="book">
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="cover">
+                                                    <img src="../网易云阅读/image/zbtj01.jpg" alt="">
+                                                </a>
+                                                <h3>
+                                                    <a href="#">宠你一世又如何</a>
+                                                </h3>
+                                                <p>桃慕慕</p>
+                                                <p class="disc">艾天晴以为要嫁是快六十的老头，直到某天晚上那个男人将她抵在了门上……</p>
+                                                <a href="#" class="read">立即阅读<i></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="cover">
+                                                    <img src="../网易云阅读/image/zbtj02.jpg" alt="">
+                                                </a>
+                                                <h3>
+                                                    <a href="#">朝天阙</a>
+                                                </h3>
+                                                <p>白鹭未双</p>
+                                                <p class="disc">我可以谋朝篡位九五荣登，也可以为你一笑俯首称臣。</p>
+                                                <a href="#" class="read">立即阅读<i></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="ll gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="cover">
+                                                    <img src="../网易云阅读/image/zbtj03.jpg" alt="">
+                                                </a>
+                                                <h3>
+                                                    <a href="#">方外：消失的八门</a>
+                                                </h3>
+                                                <p>徐公子胜治</p>
+                                                <p class="disc">徐公子胜治新书来袭！惊疲飘册风火爵要，江湖八门展奇技!</p>
+                                                <a href="#" class="read">立即阅读<i></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                        
+                            </div>
+                            
+                            
+                            <div class="tab-item">
+                                    <ul class="book">
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="cover">
+                                                    <img src="../网易云阅读/image/zbtj04.jpg" alt="">
+                                                </a>
+                                                <h3>
+                                                    <a href="#">必须找阿利克斯</a>
+                                                </h3>
+                                                <p>【法】皮耶尔·勒迈特,金祎</p>
+                                                <p class="disc">巴黎街头，一个年轻女子被突然绑架。</p>
+                                                    <a href="#" class="read">立即阅读<i></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="cover">
+                                                    <img src="../网易云阅读/image/zbtj05.jpg" alt="">
+                                                </a>
+                                                <h3>
+                                                    <a href="#">落差：如何化解我们内心的失望</a>
+                                                </h3>
+                                                <p>【法】米歇尔·勒朱瓦耶,陈思宇</p>
+                                                <p class="disc">在失望的背后隐藏着的，是一股愤懑的心理能量。</p>
+                                                <a href="#" class="read">立即阅读<i></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="ll gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="cover">
+                                                    <img src="../网易云阅读/image/zbtj06.jpg" alt="">
+                                                </a>
+                                                <h3>
+                                                <a href="#">国家行动</a>
+                                                </h3>
+                                                <p>程琳</p>
+                                                <p class="disc">这是一部反映公安战线生活的令人回肠荡气的长篇小说。!</p>
+                                                <a href="#" class="read">立即阅读<i></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </div>
+                            
+
+                            <div class="tab-item">
+                                    <ul class="rss">
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="aimg">
+                                                    <img src="../网易云阅读/image/zbtj07.jpg" alt="">
+                                                </a>
+                                                <h3><a href="#">日本通</a></h3>
+                                                <div class="detail" style="margin-top: 5px;">
+                                                    <div class="star">
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span class="no">&nbsp;</span>
+                                                    </div>
+                                                    999+人订阅
+                                                    <a href="#" class="read">立即订阅</a>
+                                                </div>
+                                                    
+                                            </div>
+                                            <div class="article" style="margin-top: 13px;">
+                                                <p><a href="#">《旅行青蛙》负责人：游戏与测试生育意愿无关，更多内幕曝光！</a></p>
+                                                <p><a href="#">看看日本学霸的书！这样努力大概就不用《等你下课》了吧……</a></p>
+                                                <p><a href="#">这些日本当红明星吃得好香，难道不是日料广告？</a></p>
+                                            </div>
+                                        </li>
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="aimg">
+                                                    <img src="../网易云阅读/image/zbtj08.png" alt="">
+                                                </a>
+                                                <h3><a href="#">VOICER</a></h3>
+                                                <div class="detail" style="margin-top: 5px;">
+                                                    <div class="star">
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                    </div>
+                                                            999+人订阅 
+                                                            <a href="#" class="read">立即订阅</a>     
+                                                </div>
+                                            </div>
+                                            <div class="article" style="margin-top: 13px;">
+                                                <p><a href="#">8件值得被载入设计史中的IKEA家具</a></p>
+                                                <p><a href="#">GOOD GOODs | 20+1件狗年礼物清单，让温柔与爱同在</a></p>
+                                                <p><a href="#">如果把最爱的一本书做成一道菜，会是什么味道？</a></p>
+                                            </div>
+                                        </li>
+                                        <li class="gray">
+                                            <div class="m-book-info">
+                                                <a href="#" class="aimg">
+                                                    <img src="../网易云阅读/image/zbtj09.png" alt="">
+                                                </a>
+                                                <h3><a href="#">慢时间</a></h3>
+                                                <div class="detail" style="margin-top: 5px;">
+                                                    <div class="star">
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span>&nbsp;</span>
+                                                        <span class="no">&nbsp;</span>
+                                                    </div>
+                                                    999+人订阅
+                                                    <a href="#" class="read">立即订阅</a>
+                                                </div>
+                                            </div>
+                                            <div class="article" style="margin-top: 13px;">
+                                                <p><a href="#">日本紅葉狩</a></p>
+                                                <p><a href="#">废物利用：旧书本做的艺术品</a></p>
+                                                <p><a href="#">如妆洱海</a></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="gfzww mt40">   <!--国风中文网-->
+                    <div class="leftbox">
+                        <header>
+                            <h2>国风中文网</h2>
+                            <a class="more" href="#">更多></a>
+                        </header>
+                        <div class="book-four">
+                            <div class="contents">
+                                <ul>
+                                    <li class="gray up">
+                                        <div class="book-info">
+                                            <a href="#" class="cover" title="绝世佣兵">
+                                                <img src="../网易云阅读/image/gfzww01.jpg" alt="">
+                                            </a>
+                                            <h3><a href="#">绝世佣兵</a></h3>
+                                            <p>醉思迁</p>
+                                            <p class="disc">五年前，他是一位只会玩乐的阔家少爷。
+                                                五年后，他是一位满身染满鲜血的死神。</p>
+                                            <a href="#" class="read">立即阅读<i></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="gray up rt">
+                                        <div class="book-info">
+                                            <a href="#" class="cover" title="财富人生">
+                                                <img src="../网易云阅读/image/gfzww02.jpg" alt="">
+                                            </a>
+                                            <h3><a href="#">财富人生</a></h3>
+                                            <p>全行缺金</p>
+                                            <p class="disc">财富是一个永恒的主题，但是到底什么才是财富呢？
+                                                重生后的李世玉，在不断的努力奋斗中，终于找到了答案，这个答案你想知道吗？
+                                                想知道就跟着李世玉一起来一段重生之旅吧。</p>
+                                            <a href="#" class="read">立即阅读<i></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="gray">
+                                        <div class="book-info">
+                                            <a href="#" class="cover" title="唐末逍遥游">
+                                                <img src="../网易云阅读/image/gfzww03.jpg" alt="">
+                                            </a>
+                                            <h3><a href="#">唐末逍遥游</a></h3>
+                                            <p>我爱毛毛</p>
+                                            <p class="disc">一个理科男穿越到唐末，起初他只想坐拥娇妻美妾，
+                                                在这个英雄辈出的时代逍遥地生存下去，什么藩镇割据、契丹铁骑都与他
+                                                无关，反正再怎么折腾历史都有它自己的规律。适逢乱世，他经历了一系列
+                                                曲折坎坷的奇遇……面对弱肉强食的世界，惊心动魄的阴谋，他能否挽狂澜于既倒？</p>
+                                            <a href="#" class="read">立即阅读<i></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="gray rt">
+                                        <div class="book-info">
+                                            <a href="#" class="cover" title="使命召唤">
+                                                <img src="../网易云阅读/image/gfzww04.jpg" alt="">
+                                            </a>
+                                            <h3><a href="#">使命召唤</a></h3>
+                                            <p>夜浮沉</p>
+                                            <p class="disc">当旧纪元归向了迟暮，新的纪元又浮现了冰山一角，血与火的新纪元，记载了旧纪元和新纪元的传奇！
+                                                少年苏暮掌握神秘古印玺，召唤古代英勇之英灵，他的出现给新纪元掀起滔天巨浪，他在这部历史上添上了浓厚的一笔。</p>
+                                            <a href="#" class="read">立即阅读<i></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightbox">
+                        <header><h2>国风中文网畅销榜</h2></header>
+                        <div class="fold" id="fold">
+                            <ul id="ul">
+                                <li>
+                                    <p class="foldlis displayN">
+                                        <a href="#"><i>01</i>官运：权术之王</a>
+                                    </p>
+                                    <div class="unfoldlis displayB">
+                                        <i>01</i>
+                                        <div>
+                                            <a href="#" class="img">
+                                                <img src="../网易云阅读/image/img01" alt="">
+                                            </a>
+                                            <h3><a href="#">官运：权术之王</a></h3>
+                                            <p>山间老寺</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="foldlis">
+                                        <a href="#"><i>02</i>官梯</a>
+                                    </p>
+                                    <div class="unfoldlis">
+                                        <i>02</i>
+                                        <div>
+                                            <a href="#" class="img">
+                                                <img src="../网易云阅读/image/img02" alt="">
+                                            </a>
+                                            <h3><a href="#">官梯</a></h3>
+                                            <p>钓人的鱼</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="foldlis">
+                                        <a href="#"><i>03</i>大靠山</a>
+                                    </p>
+                                    <div class="unfoldlis">
+                                        <i>03</i>
+                                        <div>
+                                            <a href="#" class="img">
+                                                <img src="../网易云阅读/image/img03" alt="">
+                                            </a>
+                                            <h3><a href="#">大靠山</a></h3>
+                                            <p>梅花三弄</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="foldlis">
+                                        <a href="#"><i>04</i>提拔</a>
+                                    </p>
+                                    <div class="unfoldlis">
+                                        <i>04</i>
+                                        <div>
+                                            <a href="#" class="img">
+                                                <img src="../网易云阅读/image/img04" alt="">
+                                            </a>
+                                            <h3><a href="#">提拔</a></h3>
+                                            <p>渔阳员外</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="foldlis">
+                                        <a href="#"><i>05</i>夜行者：平妖二十年</a>
+                                    </p>
+                                    <div class="unfoldlis">
+                                        <i>05</i>
+                                        <div>
+                                            <a href="#" class="img">
+                                                <img src="../网易云阅读/image/img05" alt="">
+                                            </a>
+                                            <h3><a href="#">夜行者：平妖二十年</a></h3>
+                                            <p>喃无袈裟理科佛</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="foldlis">
+                                        <a href="#"><i>06</i>绝世高手</a>
+                                    </p>
+                                    <div class="unfoldlis">
+                                        <i>06</i>
+                                        <div>
+                                            <a href="#" class="img">
+                                                <img src="../网易云阅读/image/img06" alt="">
+                                            </a>
+                                            <h3><a href="#">绝世高手</a></h3>
+                                            <p>我自对天笑</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="more">
+                                <i></i>
+                                查看更多
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="About mt40">
+                    <header>
+                        <h2>关于云阅读</h2>
+                    </header>
+                    <div class="m-about">
+                        <ul>
+                            <li class="gz">
+                                <span class="icon"></span>
+                                <h3>网易云阅读</h3>
+                                <h6>最受欢迎的阅读产品</h6>
+                                <p>
+                                    <span>关于我们:</span>
+                                    <a href="#" class="sns wx"></a>
+                                    <a href="#" class="sns wb"></a>
+                                    <a href="#" class="sns yx"></a>
+                                </p>
+                                <a href="#" class="btn">+  关注</a>
+                            </li>
+                            <li class="tg">
+                                <span class="icon"></span>
+                                <h3>作者中心</h3>
+                                <h6>原创、自媒体、内容商、漫画</h6>
+                                <p>招募作者，福利优厚</p>
+                                <a href="#" class="btn">投稿 ></a>
+                            </li>
+                            <li class="fk">
+                                <span class="icon"></span>
+                                <h3>客服中心</h3>
+                                <h6>欢迎反馈宝贵意见给我们</h6>
+                                <p>客服：0571-89853801</p>
+                                <a href="#" class="btn">意见反馈</a>
+                            </li>
+                            <li class="hz">
+                                <span class="icon"></span>
+                                <h3>商务合作</h3>
+                                <h6>欢迎来电洽谈相关合作</h6>
+                                <p>广告：0571-89853126
+                                        资讯：15757831061
+                                        图书：0571-89852025
+                                        内容：reader@188.com
+                                        合作微信：Crys1199</p>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+        </div>
+        </div>
+        <div class="g-bd-d"><!--尾部导航-->
+            <div class="rump">
+                <ul>
+                    <li class="fl">
+                        <h3>出版图书</h3>
+                        <p>
+                        <a href="#">小说作品</a>
+                        <a href="#">人文社科</a>
+                        <a href="#">成功励志</a>
+                        <a href="#">经济管理</a>
+                        <a href="#">品质生活</a>
+                        <a href="#">计算机</a>
+                        <a href="#">文学作品</a>
+                        <a href="#">更多<i></i></a>
+                    </p>
+                    </li>
+                    <li>
+                        <h3>国风中文网</h3>
+                        <p>
+                            <a href="#">都市生活</a>
+                            <a href="#">官场职场</a>
+                            <a href="#">玄幻仙侠</a>
+                            <a href="#">科幻奇幻</a>
+                            <a href="#">军事谍战</a>
+                            <a href="#">悬疑探险</a>
+                            <a href="#">灵异恐怖</a>
+                            <a href="#">更多<i></i></a>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>采薇书院</h3>
+                        <p>
+                            <a href="#">都市言情</a>
+                            <a href="#">言情架空</a>
+                            <a href="#">种田重生</a>
+                            <a href="#">宫斗宅斗</a>
+                            <a href="#">古风古韵</a>
+                            <a href="#">仙侠幻情</a>
+                            <a href="#">浪漫青春</a>
+                            <a href="#">更多<i></i></a>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>漫画</h3>
+                        <p>
+                            <a href="#">少年热血</a>
+                            <a href="#">少女恋爱</a>
+                            <a href="#">幽默搞笑</a>
+                            <a href="#">魔幻科幻</a>
+                            <a href="#">青春都市</a>
+                            <a href="#">历史战争</a>
+                            <a href="#">恐怖推理</a>
+                            <a href="#">更多<i></i></a>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>杂志</h3>
+                        <p>
+                            <a href="#">国家人文</a>
+                            <a href="#">南方人物</a>
+                            <a href="#">南都周刊</a>
+                            <a href="#">博客天下</a>
+                            <a href="#">环球科学</a>
+                            <a href="#">南都娱乐</a>
+                            <a href="#">凤凰周刊</a>
+                            <a href="#">更多<i></i></a>
+                        </p>
+                    </li>
+                    <li class="ll">
+                        <h3>订阅</h3>
+                        <p>
+                            <a href="#">视觉时尚</a>
+                            <a href="#">科技健康</a>
+                            <a href="#">汽车体育</a>
+                            <a href="#">星座情感</a>
+                            <a href="#">时评科普</a>
+                            <a href="#">旅游美食</a>
+                            <a href="#">文史读书</a>
+                            <a href="#">更多<i></i></a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="g-ftw">
+            <div class="g-ft">
+                <div class="foot">
+                    <p>
+                        <a href="#">网易首页</a>
+                        <span class="sep">|</span>
+                        <a href="#">公司简介</a>
+                        <span class="sep">|</span>
+                        <a href="#">客户服务</a>
+                        <span class="sep">|</span>
+                        <a href="#">相关法律</a>
+                        <span class="sep">|</span>
+                        <a href="#">网站导航</a>
+                        <span class="sep">|</span>
+                        <a href="#">意见反馈</a>
+                        <span class="sep">|</span>
+                        <a href="#">客服电话</a>
+                        <span class="sep">|</span>
+                        <a href="#">帮助中心</a>
+                        <span class="sep">|</span>
+                        <a href="#">作者中心</a>
+                    </p>
+                </div>
+                <div class="right" style="padding: 10px 0 0;">
+                    <p>网易公司版权所有©1997-2018</p>
+                </div>
+                <div class="share">
+                    <label>分享到：</label>
+                    <div><a href="#" class="s2">微信</a></div>
+                    <div><a href="#" class="s4">易信</a></div>
+                    <div><a href="#" class="s1">微博</a></div>
+                    <div><a href="#" class="s3">QQ空间</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--多属性运动函数-->
+    <script src="JavaScript/animate.js"></script> 
+     <script>
+         window.onload = function(){
+            /*公众号*/
+            function $(id){
+                 return document.getElementById(id);
+             }
+            $("ligzh").onmouseover = function(){
+            $("gzh").style.display = "block";
+            } 
+            $("ligzh").onmouseout = function(){
+            $("gzh").style.display = "none";
+            }
+
+            /*主编推荐*/
+            var lis = document.getElementById("tab").children[0].children;
+            var tabItem = this.document.getElementById("contents").children;
+            for(var i=0;i<lis.length;i++){
+                lis[i].index = i;
+                lis[i].onmouseover = function(){
+                    for(var j=0;j<lis.length;j++){
+                        lis[j].id = "";
+                        tabItem[j].id = "";
+                    }
+                    this.id = "crt";
+                    tabItem[this.index].id = "show";
+                }
+            }
+
+            /*========左边菜单=========*/
+            for(var i=0;i<4;i++){
+                $("Menu").children[i].onmouseover =function(){
+                    this.children[1].style.display = "block";
+                    this.children[0].children[0].children[0].style.display = "none";
+                }
+                $("Menu").children[i].onmouseout = function(){
+                    this.children[1].style.display = "none";
+                    this.children[0].children[0].children[0].style.display = "block";
+                }
+            }
+
+
+
+
+
+            var iNow = 0;   //控制播放张数
+            var banner = $("banner");
+            var ul = $("bannerul");
+            
+            var ulLis = ul.children; //获得全部要做动画的图片
+
+            var scrollWidth = banner.clientWidth; //得到大盒子宽度，也是图片要走的距离
+
+            //第一张图留在中央，其他图片移至720位置
+            for(var i=1;i<ulLis.length;i++){
+                ulLis[i].style.left = scrollWidth + "px";
+            }
+
+
+            var btn = $("arr").children;
+            
+            for(var k in btn){
+                /*当点击(左)右侧按钮时，当前图片慢慢走到(右)左侧，下一张图片无论在左侧还是在右侧，
+                都先快速地移动到(左)右侧，再从(左)右侧慢慢进入舞台。
+                */
+                btn[k].onclick = function(){
+                    if(this.className == "l-btn"){
+                        //alert("左");
+                        animate(ulLis[iNow],{left:scrollWidth}); //当前图片向右边出去
+                        iNow--;
+                        if(iNow < 0){
+                            iNow = ulLis.length-1;
+                        }
+                        ulLis[iNow].style.left = -scrollWidth + "px";  //无论在左在右，都先回到左侧-720px的位置
+                        animate(ulLis[iNow],{left:0});  //下一张再从左边往中间进来
+                        setColor();
+                    }
+                    else if(this.className == "r-btn"){
+                        //alert("右");
+                    /*    animate(ulLis[iNow],{left:-scrollWidth}); //当前图片向左边出去
+                        iNow++;
+                        if(iNow > ulLis.length - 1){
+                            iNow = 0;
+                        }
+                        ulLis[iNow].style.left = scrollWidth + "px";  //无论在左在右，都先回到右侧720px的位置
+                        animate(ulLis[iNow],{left:0});  //下一张再从右边往中间进来    */
+                        autoplay();
+                        
+                    }
+
+                }
+            }
+
+            var jcontrol = document.getElementById("j-control");
+            var olLis = jcontrol.children;
+            for(var j in olLis){
+                olLis[j].onmouseover = function(){
+                    var that = this.innerHTML-1;  //获取当前索引号：我需要知道点击的是第几张
+                    //console.log(typeof that);
+                    //alert(this.innerHTML);
+                    if(that > iNow){              //如果点击的张数索引大于当前舞台图片的张数
+                        animate(ulLis[iNow],{left:-scrollWidth});      //舞台图片移动到左侧
+                        ulLis[that].style.left = scrollWidth + "px";   //点击的张数瞬间到右侧
+                        //animate(ulLis[that],{left:0});
+                    }else if(that < iNow){
+                        animate(ulLis[iNow],{left:scrollWidth});
+                        ulLis[that].style.left = -scrollWidth + "px";
+                        //animate(ulLis[that],{left:0});
+                    }
+                    iNow = that;
+                    animate(ulLis[that],{left:0});
+                    /*给当前圆圈设置class*/
+                    for(var i=0;i<olLis.length;i++){
+                        olLis[i].className = "";
+                    }
+                    this.className = "j-crt";
+                }
+            }
+            /*最后加定时器，注意，定时器与右侧按钮逻辑一样*/
+            var timer = null;
+            timer = setInterval(autoplay,3000);
+            function autoplay(){
+                animate(ulLis[iNow],{left:-scrollWidth}); //当前图片向左边出去
+                    iNow++;
+                    if(iNow > ulLis.length - 1){
+                        iNow = 0;
+                    }
+                    ulLis[iNow].style.left = scrollWidth + "px";  //无论在左在右，都先回到右侧720px的位置
+                    animate(ulLis[iNow],{left:0});  //下一张再从右边往中间进来
+                    for(var i=0;i<olLis.length;i++){
+                        olLis[i].className = "";
+                    }
+                    olLis[iNow].className = "j-crt";
+                    
+            }
+            /*鼠标进出入banner关闭/开启定时器以及左右两侧按钮的浮现/隐藏*/
+            var arr = $("arr");
+            banner.onmouseover = function() {
+                clearInterval(timer);
+                arr.style.display = "block";
+            }
+            banner.onmouseout = function() {
+                clearInterval(timer);  // 要执行定时器 先清除定时器
+                timer = setInterval(autoplay,3000);  // 开启定时器
+                arr.style.display = "none";
+            }
+
+            function setColor(){
+                for(var i=0;i<olLis.length;i++){
+                    olLis[i].className = "";
+                }
+                olLis[iNow].className = "j-crt";
+            }
+
+         }
+     </script>
+</body>
+</html>

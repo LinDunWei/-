@@ -1,0 +1,104 @@
+.g-bd-d{
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    margin-top: 79px;
+    overflow: hidden;
+}
+.g-bd-d .rump{
+    width: 980px;
+    margin: 0 auto;
+    padding: 38px 0 55px;
+    overflow: hidden;
+}
+.g-bd-d .rump li{
+    float: left;
+    width: 115px;
+    padding: 0 23px 0 33px;
+    border-right: 1px solid #eee;
+}
+.g-bd-d .rump .fl{
+    padding-left: 0;
+}
+.g-bd-d .rump .ll{
+    padding-right: 0;
+    border-right: 0;
+}
+.rump h3{
+    font-size: 16px;
+    color: #655;
+    font-weight: 500;
+}
+.rump p{
+    line-height: 30px;
+}
+.rump p a{
+    white-space: nowrap;
+    color: #888;
+    margin: 0 5px 0 0;
+}
+.rump p a i{
+    background: url("../image/jingling02.png") no-repeat;
+    background-position: -30px -10px;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-left: 3px;
+}
+
+
+.g-ftw{
+    position: relative;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+}
+.g-ft{
+    width: 980px;
+    margin: 0 auto;
+    padding: 40px 0 50px;
+}
+.foot{
+    line-height: 17px;
+}
+.foot p{
+    text-align: center;
+}
+.sep{
+    margin: 0 6px;
+    color: #ccc;
+}
+.right p{
+    text-align: center;
+    color: #888;
+}
+.share{
+    line-height: 16px;
+    width: 153px;
+    margin: 10px auto 0;
+}
+.share label{
+    float: left;
+    padding: 0 7px 0 0;
+    margin: 0 2px 0 0;
+    color: #999;
+}
+.share a{
+    float: left;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    margin: 0 8px 0 0;
+    text-indent: -2000px;
+    background: url("../image/star.png") no-repeat;
+}
+.share a.s2{
+    background-position: -17px -39px;
+}
+.share a.s4{
+    background-position: -49px -38px;
+}
+.share a.s1{
+    background-position: 0 -39px;
+}
+.share a.s3{
+    background-position: -33px -39px;
+}
